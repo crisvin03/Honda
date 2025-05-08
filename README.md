@@ -2,7 +2,7 @@
 
 A responsive front end web project that showcases Honda motorcycles available in the Philippines. Users can browse, search, and filter motorcycles based on their price and features.
 
-![screenshot](./img/HondaScreenshot.jpg)
+![screenshot](./img/HondaScreenshot.png)
 
 ---
 

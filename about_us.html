@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Honda PH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* About Us Header Section */
+        header {
+            background-color: #B22222; /* Set to the same color as index header */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em; /* Adjust font size to fit your design */
+        }
+
+        .logo img {
+            height: 40px; /* Adjust the height of the logo */
+            margin-right: 10px;
+            width: auto;
+        }
+
+        /* Navigation Styling */
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        header nav a i {
+            margin-right: 8px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cover Photo Section */
+        .cover-photo {
+            background: url('./img/cover_photo.avif') no-repeat center center;
+            background-size: cover;
+            height: 400px; /* Adjust the height of the cover photo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Overlay to make text more visible */
+        .cover-photo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+            z-index: 1;
+        }
+
+        .cover-photo h1 {
+            color: white;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            z-index: 2; /* Ensures the text stays above the overlay */
+        }
+
+        .cover-photo i {
+            margin-right: 10px;
+            font-size: 1.0em; /* Adjust the size of the icon */
+            vertical-align: middle;
+        }
+
+        /* About Us Header Section */
+header {
+    background-color: #B22222; /* Set to the same color as index header */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em; /* Adjust font size to fit your design */
+}
+
+.logo img {
+    height: 40px; /* Adjust the height of the logo */
+    margin-right: 10px;
+    width: auto;
+}
+
+/* Navigation Styling */
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+header nav a i {
+    margin-right: 8px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Cover Photo Section */
+.cover-photo {
+    background: url('./img/cover_photo.avif') no-repeat center center;
+    background-size: cover;
+    height: 400px; /* Adjust the height of the cover photo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay to make text more visible */
+.cover-photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1;
+}
+
+.cover-photo h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2; /* Ensures the text stays above the overlay */
+}
+
+.cover-photo i {
+    margin-right: 10px;
+    font-size: 1.0em; /* Adjust the size of the icon */
+    vertical-align: middle;
+}
+
+/* About Us Content Section */
+.about-content {
+    max-width: 1200px; /* Added a max-width to make the content more compact on large screens */
+    margin: 40px auto; /* Center content with auto margins */
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: left;
+    border-radius: 8px; /* Softens corners for a better visual effect */
+}
+
+.about-content-inner {
+    display: flex; /* This allows the image and text to be placed side by side */
+    align-items: center; /* Vertically align the image and text */
+    justify-content: space-between;
+}
+
+.about-content img {
+    width: 45%; /* Adjust the width of the image */
+    max-width: 600px;
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 8px; /* Added rounded corners to the image */
+}
+
+.about-text {
+    width: 50%; /* Ensures the text takes up the remaining space */
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Logo and Navigation -->
+    <header>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Honda Logo">
+            HONDA PH
+        </div>
+        <nav>
+            <a href="index.html"><i class="fas fa-motorcycle"></i> Motorcycle</a>
+            <a href="about_us.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html"><i class="fas fa-phone"></i> Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Cover Photo Section with "About Us" Text -->
+    <div class="cover-photo">
+        <h1><i class="fas fa-info-circle"></i> About Us</h1>
+    </div>
+
+<!-- About Us Content Section -->
+<div class="about-content">
+    <div class="about-content-inner">
+        <img src="./img/About_us.jpg" alt="Details about Honda"> <!-- Replace with your own image -->
+        <div class="about-text">
+            <h2>Honda</h2>
+            <p>At Honda, we are committed to creating innovative, reliable, and sustainable motorcycles that meet the needs of riders around the world. Our vision is to be a company that brings joy to people, combining cutting-edge technology with a deep respect for the environment.</p>
+            <p>With a legacy of performance, reliability, and customer satisfaction, Honda has been a leader in the motorcycle industry for decades. Our motorcycles are designed with passion, precision, and care, ensuring an unmatched riding experience.</p>
+        </div>
+    </div>
+</div>
+
+   <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="img/Honda.png" alt="Honda Logo">
+        </div>
+        <div class="footer-links">
+            <p>ABOUT US</p>
+            <p>We at Honda dream of a better world where people, technology, and the environment live as one...</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Honda" class="icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/Honda" class="icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com/Honda" class="icon" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com/Honda" class="icon" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>                
+        </div>
+        <div class="contact-info">
+            <p><i class="fas fa-comments"></i> TALK TO US</p>
+            <p><i class="fas fa-phone"></i> PLDT Toll Free Number: 1-800-10-HONDAPH</p>
+            <p><i class="fas fa-phone-alt"></i> Landline: (02)-8581-6700 to 6799</p>
+            <p><i class="fas fa-mobile-alt"></i> Mobile: 0917-88-HONDA</p>
+            <p><i class="fas fa-envelope"></i> Email Address: customerservice@hondaph.com</p>
+        </div>            
+        <div class="region-selection">
+            <label for="region">Select Region</label>
+            <select name="region" id="region">
+                <option value="global">Global Honda</option>
+                <option value="ph">Philippines</option>
+            </select>
+        </div>
+    </div>
+</footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

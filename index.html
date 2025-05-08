@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Honda Logo">
+            HONDA PH
+        </div>
+        <nav>
+            <a href="index.html"><i class="fas fa-motorcycle"></i> Motorcycle</a>
+            <a href="about_us.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html"><i class="fas fa-phone"></i> Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h1>HONDA PH</h1>
+        <p>We at Honda dream of a better world where people, technology and the environment live as one.</p>
+        <button>Shop Now</button>
+    </div>
+
+    <div class="search-filters">
+        <input type="text" placeholder="Search motorcycles..." id="search-input">
+        <select id="price-filter">
+            <option value="default">Filter by Price</option>
+            <option value="low-to-high">Low to High</option>
+            <option value="high-to-low">High to Low</option>
+        </select>
+        <button onclick="applyFilters()">Search</button>
+    </div>
+
+    <div class="search-results-message" id="search-results-message"></div>
+
+    <div class="product-grid" id="product-grid">
+        <!-- Page 1 Products -->
+        <div class="product">
+            <img src="./img/Honda-1.jpg" alt="Motorcycle">
+            <h3>HONDA ADV 160</h3>
+            <p>SRP: ₱166,900</p>
+            <p>Downpayment: ₱20,000</p>
+            <p>Monthly: ₱7,700</p>
+        </div>
+        <!-- Page 1 Additional Products -->
+        <div class="product">
+            <img src="./img/Honda-2.jpg" alt="Motorcycle">
+            <h3>HONDA AIRBLADE 160</h3>
+            <p>SRP: ₱125,900</p>
+            <p>Downpayment: ₱12,000</p>
+            <p>Monthly: ₱5,800</p>
+        </div>
+        <div class="product">
+            <img src="./img/Honda-3.webp" alt="Motorcycle">
+            <h3>HONDA BEAT ( LIMITED EDITION )</h3>
+            <p>SRP: ₱74,400</p>
+            <p>Downpayment: ₱3,800</p>
+            <p>Monthly: ₱3,800</p>
+        </div>
+        <div class="product">
+            <img src="./img/Honda-4.jpg" alt="Motorcycle">
+            <h3>HONDA Beat 110 Premium</h3>
+            <p>SRP: ₱74,900</p>
+            <p>Downpayment: ₱4,500</p>
+            <p>Monthly: ₱3,700</p>
+        </div>
+        <div class="product">
+            <img src="./img/Honda-5.jpg" alt="Motorcycle">
+            <h3>Honda Beat Fashion Sport</h3>
+            <p>SRP: ₱75,400</p>
+            <p>Downpayment: ₱3,600</p>
+            <p>Monthly: ₱3,600</p>
+        </div>
+        <div class="product">
+            <img src="./img/Honda-6.webp" alt="Motorcycle">
+            <h3>HONDA BEAT PLAYFUL</h3>
+            <p>SRP: ₱71,900</p>
+            <p>Downpayment: ₱3,600</p>
+            <p>Monthly: ₱3,700</p>
+        </div>
+
+        <!-- Page 2 Products (hidden initially) -->
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-7.webp" alt="Motorcycle">
+            <h3>HONDA BEAT PREMIUM</h3>
+            <p>SRP: ₱73,400</p>
+            <p>Downpayment: ₱3,700</p>
+            <p>Monthly: ₱3,700</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-8.jpg" alt="Motorcycle">
+            <h3>HONDA Beat Street (STD)</h3>
+            <p>SRP: ₱75,400</p>
+            <p>Downpayment: ₱3,600</p>
+            <p>Monthly: ₱3,600</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-9.webp" alt="Motorcycle">
+            <h3>HONDA CB150X</h3>
+            <p>SRP: ₱173,900</p>
+            <p>Downpayment: ₱25,000</p>
+            <p>Monthly: ₱7,800</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-10.jpg" alt="Motorcycle">
+            <h3>HONDA CLICK 125</h3>
+            <p>SRP: ₱81,400</p>
+            <p>Downpayment: ₱3,500</p>
+            <p>Monthly: ₱4,100</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-11.webp" alt="Motorcycle">
+            <h3>HONDA CLICK 125i</h3>
+            <p>SRP: ₱84,823</p>
+            <p>Downpayment: ₱4,500</p>
+            <p>Monthly: ₱4,000</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-12.jpg" alt="Motorcycle">
+            <h3>HONDA CLICK 150i</h3>
+            <p>SRP: ₱109,012</p>
+            <p>Downpayment: ₱6,000</p>
+            <p>Monthly: ₱5,100</p>
+        </div>
+
+        <!-- Page 3 Products (hidden initially) -->
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-13.jpg" alt="Motorcycle">
+            <h3>HONDA CLICK 160</h3>
+            <p>SRP: ₱116,900</p>
+            <p>Downpayment: ₱10,000</p>
+            <p>Monthly: ₱5,600</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-14.jpg" alt="Motorcycle">
+            <h3>HONDA CRF150L</h3>
+            <p>SRP: ₱147,900</p>
+            <p>Downpayment: ₱20,000</p>
+            <p>Monthly: ₱6,700</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-15.jpg" alt="Motorcycle">
+            <h3>HONDA CRF250R</h3>
+            <p>SRP: ₱459,000</p>
+            <p>Downpayment: ₱116,000</p>
+            <p>Monthly: ₱15,000</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-16.jpg" alt="Motorcycle">
+            <h3>HONDA DIO</h3>
+            <p>SRP: ₱62,400</p>
+            <p>Downpayment: ₱3,300</p>
+            <p>Monthly: ₱3,300</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-17.jpg" alt="Motorcycle">
+            <h3>HONDA GENIO</h3>
+            <p>SRP: ₱74,020</p>
+            <p>Downpayment: ₱3,800</p>
+            <p>Monthly: ₱3,698</p>
+        </div>
+        <div class="product" style="display: none;">
+            <img src="./img/Honda-18.jpg" alt="Motorcycle">
+            <h3>HONDA PCX 150</h3>
+            <p>SRP: ₱122,080</p>
+            <p>Downpayment: ₱10,000</p>
+            <p>Monthly: ₱5,600</p>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#" onclick="goToPreviousPage()">
+            <span class="icon">&#171;</span>
+        </a>
+        <a href="#" onclick="changePage(1)">1</a>
+        <a href="#" onclick="changePage(2)">2</a>
+        <a href="#" onclick="changePage(3)">3</a>
+        <a href="#" onclick="goToNextPage()">
+            <span class="icon">&#187;</span>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/Honda.png" alt="Honda Logo">
+            </div>
+            <div class="footer-links">
+                <p>ABOUT US</p>
+                <p>We at Honda dream of a better world where people, technology, and the environment live as one...</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Honda" class="icon" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/Honda" class="icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com/Honda" class="icon" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/Honda" class="icon" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>                
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-comments"></i> TALK TO US</p>
+                <p><i class="fas fa-phone"></i> PLDT Toll Free Number: 1-800-10-HONDAPH</p>
+                <p><i class="fas fa-phone-alt"></i> Landline: (02)-8581-6700 to 6799</p>
+                <p><i class="fas fa-mobile-alt"></i> Mobile: 0917-88-HONDA</p>
+            </div>            
+            <div class="region-selection">
+                <label for="region">Select Region</label>
+                <select name="region" id="region">
+                    <option value="global">Global Honda</option>
+                    <option value="ph">Philippines</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
